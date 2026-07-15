@@ -212,9 +212,10 @@ tr:hover .row-del{opacity:1;}
 
 /* ---------- Popover ---------- */
 .popover{
-  position:absolute;top:calc(100% + 6px);left:0;z-index:50;
+  position:fixed;z-index:50;
   background:var(--bg-2);border:1px solid var(--border-strong);border-radius:10px;
   box-shadow:0 20px 40px -12px rgba(0,0,0,.6);padding:8px;min-width:200px;
+  max-height:min(360px, calc(100vh - 24px));overflow-y:auto;
 }
 .popover.wide{min-width:270px;}
 .popover-title{font-size:10.5px;text-transform:uppercase;letter-spacing:.06em;color:var(--text-low);padding:4px 8px 6px;font-weight:500;}
