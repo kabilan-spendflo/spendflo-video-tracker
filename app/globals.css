@@ -230,12 +230,13 @@ tr:hover .row-del{opacity:1;}
 .opt-row{display:flex;gap:6px;padding:4px;}
 .opt-row .opt-btn{justify-content:center;}
 
-.edit-pencil{
+.edit-pencil, .remove-opt{
   opacity:0;flex:none;display:flex;align-items:center;justify-content:center;color:var(--text-low);
   padding:3px;border-radius:5px;margin-left:2px;transition:opacity .12s ease;
 }
-.opt-btn:hover .edit-pencil{opacity:1;}
+.opt-btn:hover .edit-pencil, .opt-btn:hover .remove-opt{opacity:1;}
 .edit-pencil:hover{color:var(--pink-400);background:var(--bg-1);}
+.remove-opt:hover{color:var(--amber);background:var(--bg-1);}
 .rename-input{
   flex:1;background:var(--bg-1);border:1px solid var(--pink-500);border-radius:6px;padding:4px 7px;
   font-size:13px;color:var(--text-hi);outline:none;min-width:0;
@@ -257,6 +258,8 @@ tr:hover .row-del{opacity:1;}
   flex:1;background:var(--bg-3);border:1px solid var(--border-strong);border-radius:6px;padding:5px 7px;
   font-size:12px;outline:none;color:var(--text-hi);min-width:0;
 }
+.platform-edit-row .x{background:none;border:none;color:var(--text-low);cursor:pointer;padding:4px;flex:none;}
+.platform-edit-row .x:hover{color:var(--amber);}
 
 .link-row{display:flex;gap:6px;align-items:center;padding:5px 4px;}
 .link-row select, .link-row input{
