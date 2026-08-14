@@ -15,6 +15,7 @@ export default function CalendarPanel() {
   const viewMonthRef = useRef(null);
   const viewWeekRef = useRef(null);
   const addItemRef = useRef(null);
+  const dayPanelRef = useRef(null);
 
   useEffect(() => {
     const cleanup = mountCalendar(
@@ -28,6 +29,7 @@ export default function CalendarPanel() {
         viewMonthBtn: viewMonthRef.current,
         viewWeekBtn: viewWeekRef.current,
         addItemBtn: addItemRef.current,
+        dayPanel: dayPanelRef.current,
       },
       db
     );
@@ -56,6 +58,8 @@ export default function CalendarPanel() {
         <div className="calendar-sidebar" ref={sidebarRef} />
         <div className="calendar-grid-wrap" ref={rootRef} />
       </div>
+
+      <div className="cal-day-panel" ref={dayPanelRef} />
     </>
   );
 }
