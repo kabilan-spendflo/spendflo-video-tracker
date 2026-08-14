@@ -1,15 +1,23 @@
 export function BrandMark({ className }) {
   return (
-    <svg className={className} viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
+    <svg className={className} viewBox="0 0 556 551" fill="none" xmlns="http://www.w3.org/2000/svg">
+      <path d="M268.875 3.98276L3.35712 287.812C1.22077 290.131 0 293.183 0 296.357V321.81C0 328.708 5.61555 334.323 12.5129 334.323H543.487C550.384 334.323 556 328.708 556 321.81V296.357C556 293.183 554.779 290.131 552.643 287.812L287.125 3.98276C282.181 -1.32759 273.819 -1.32759 268.875 3.98276Z" fill="url(#brandPaint0)" />
+      <path d="M274.246 238.494L8.72851 394.02C3.54023 395.668 0 400.49 0 405.922V427.164C0 434.061 5.61555 439.677 12.5129 439.677H543.487C550.384 439.677 556 434.061 556 427.164V405.922C556 400.49 552.46 395.668 547.272 394.02L281.754 238.494C279.312 237.7 276.688 237.7 274.185 238.494H274.246Z" fill="url(#brandPaint1)" />
+      <path d="M274.246 420.509L8.72851 504.437C3.54023 506.085 0 510.907 0 516.34V537.581C0 544.478 5.61555 550.094 12.5129 550.094H543.487C550.384 550.094 556 544.478 556 537.581V516.34C556 510.907 552.46 506.085 547.272 504.437L281.754 420.509C279.312 419.716 276.688 419.716 274.185 420.509H274.246Z" fill="url(#brandPaint2)" />
       <defs>
-        <linearGradient id="brandGradient" x1="0" y1="0" x2="0" y2="1">
-          <stop offset="0%" stopColor="#F0409C" />
-          <stop offset="100%" stopColor="#C4145F" />
+        <linearGradient id="brandPaint0" x1="278.031" y1="0.0152596" x2="278.031" y2="334.323" gradientUnits="userSpaceOnUse">
+          <stop stopColor="#DE47B4" />
+          <stop offset="1" stopColor="#CD335B" />
+        </linearGradient>
+        <linearGradient id="brandPaint1" x1="277.969" y1="237.944" x2="277.969" y2="439.677" gradientUnits="userSpaceOnUse">
+          <stop stopColor="#EBC5DA" />
+          <stop offset="1" stopColor="#D37AA8" />
+        </linearGradient>
+        <linearGradient id="brandPaint2" x1="277.969" y1="550.094" x2="277.969" y2="419.899" gradientUnits="userSpaceOnUse">
+          <stop stopColor="#E7B8D2" />
+          <stop offset="1" stopColor="#F4E3EC" />
         </linearGradient>
       </defs>
-      <path d="M8 96 L50 66 L92 96" fill="none" stroke="var(--pink-100)" strokeWidth="16" strokeLinecap="round" strokeLinejoin="round" />
-      <path d="M8 72 L50 38 L92 72" fill="none" stroke="var(--pink-300)" strokeWidth="16" strokeLinecap="round" strokeLinejoin="round" />
-      <path d="M8 45 L50 8 L92 45" fill="none" stroke="url(#brandGradient)" strokeWidth="16" strokeLinecap="round" strokeLinejoin="round" />
     </svg>
   );
 }
