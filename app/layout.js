@@ -13,8 +13,8 @@ const ppNeueMontreal = localFont({
 });
 
 export const metadata = {
-  title: "Spendflo Videos",
-  description: "Video Marketing Master Tracker",
+  title: "Kabilan's Board",
+  description: "Video and Brand Marketing Master Tracker",
 };
 
 export default function RootLayout({ children }) {

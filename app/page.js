@@ -19,7 +19,7 @@ export default function Page() {
   const [user, setUser] = useState(null);
   const [signingIn, setSigningIn] = useState(false);
   const [error, setError] = useState("");
-  const [activeTab, setActiveTab] = useState("videos"); // videos | calendar
+  const [activeTab, setActiveTab] = useState("calendar"); // calendar | videos
 
   useEffect(() => {
     if (!isFirebaseConfigured) return;
@@ -85,8 +85,8 @@ export default function Page() {
       <div className="center-screen">
         <div className="login-card">
           <BrandMark className="login-mark" />
-          <h1>Spendflo Videos</h1>
-          <p>Video Marketing Master Tracker</p>
+          <h1>Kabilan&apos;s Board</h1>
+          <p>Video and Brand Marketing Master Tracker</p>
           {error ? <div className="login-error">{error}</div> : null}
           <button className="google-btn" onClick={handleSignIn} disabled={signingIn}>
             <GoogleIcon />
@@ -104,25 +104,25 @@ export default function Page() {
         <div className="brand">
           <BrandMark className="brand-mark" />
           <div className="brand-text">
-            <h1>Spendflo Videos</h1>
-            <p>Video Marketing Master Tracker</p>
+            <h1>Kabilan&apos;s Board</h1>
+            <p>Video and Brand Marketing Master Tracker</p>
           </div>
         </div>
         <div className="top-actions">
           <div className="main-tabs">
             <button
               type="button"
-              className={activeTab === "videos" ? "active" : ""}
-              onClick={() => setActiveTab("videos")}
-            >
-              Videos
-            </button>
-            <button
-              type="button"
               className={activeTab === "calendar" ? "active" : ""}
               onClick={() => setActiveTab("calendar")}
             >
               Calendar
+            </button>
+            <button
+              type="button"
+              className={activeTab === "videos" ? "active" : ""}
+              onClick={() => setActiveTab("videos")}
+            >
+              Videos
             </button>
           </div>
           <div className="top-user">
@@ -136,7 +136,7 @@ export default function Page() {
         </div>
       </div>
 
-      {activeTab === "videos" ? <VideosPanel /> : <CalendarPanel />}
+      {activeTab === "calendar" ? <CalendarPanel /> : <VideosPanel />}
     </div>
   );
 }
