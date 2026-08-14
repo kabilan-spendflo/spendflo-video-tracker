@@ -94,5 +94,9 @@ Google Sign-In only works from domains Firebase trusts:
 - `videos/{id}` — one doc per video: title, contentType, taskType, priority,
   status, deadline, publishDate, links[], assigneeId, createdAt.
 - `team/{id}` — one doc per person: name, color.
-- `config/labels` — one doc holding renamed labels for statuses, content
-  types, task types, priorities, platforms, and column headers.
+- `calendarItems/{id}` — one doc per content calendar entry (LinkedIn post,
+  event, video, etc.): title, format, date, links[], createdAt.
+- `config/labels` — one doc holding the editable option lists (statuses,
+  content types, task types, priorities, platforms, calendar formats) and
+  renamed column headers. Platforms are shared between the video tracker's
+  Links field and the calendar's Links field.
