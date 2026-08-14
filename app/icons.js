@@ -7,8 +7,9 @@ export function BrandMark({ className }) {
           <stop offset="100%" stopColor="#C4145F" />
         </linearGradient>
       </defs>
-      <path d="M50 10 L88 55 A6 6 0 0 1 82.5 64 L50 64 L17.5 64 A6 6 0 0 1 12 55 Z" fill="url(#brandGradient)" />
-      <path d="M50 44 L80 79 A6 6 0 0 1 74.8 88 L25.2 88 A6 6 0 0 1 20 79 Z" fill="var(--pink-300)" opacity=".9" />
+      <path d="M8 96 L50 66 L92 96" fill="none" stroke="var(--pink-100)" strokeWidth="16" strokeLinecap="round" strokeLinejoin="round" />
+      <path d="M8 72 L50 38 L92 72" fill="none" stroke="var(--pink-300)" strokeWidth="16" strokeLinecap="round" strokeLinejoin="round" />
+      <path d="M8 45 L50 8 L92 45" fill="none" stroke="url(#brandGradient)" strokeWidth="16" strokeLinecap="round" strokeLinejoin="round" />
     </svg>
   );
 }
