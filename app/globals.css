@@ -247,6 +247,11 @@ tr:hover .row-del{opacity:1;}
 .opt-btn:hover .edit-pencil, .opt-btn:hover .remove-opt{opacity:1;}
 .edit-pencil:hover{color:var(--pink-400);background:var(--bg-1);}
 .remove-opt:hover{color:var(--amber);background:var(--bg-1);}
+.opt-color-swatch{
+  width:15px;height:15px;border-radius:5px;flex:none;cursor:pointer;margin-left:4px;
+  border:1px solid rgba(255,255,255,.25);transition:transform .12s ease;
+}
+.opt-color-swatch:hover{transform:scale(1.15);border-color:var(--text-hi);}
 .rename-input{
   flex:1;background:var(--bg-1);border:1px solid var(--pink-500);border-radius:6px;padding:4px 7px;
   font-size:13px;color:var(--text-hi);outline:none;min-width:0;
@@ -362,12 +367,12 @@ tr:hover .row-del{opacity:1;}
   letter-spacing:.06em;text-align:center;
 }
 .cal-grid-body{display:grid;grid-template-columns:repeat(7,1fr);}
-.cal-grid-body.week{grid-auto-rows:minmax(320px,1fr);}
-.cal-grid-body.month{grid-auto-rows:minmax(120px,1fr);}
+.cal-grid-body.week{grid-auto-rows:360px;}
+.cal-grid-body.month{grid-auto-rows:132px;}
 
 .cal-day{
   border-right:1px solid var(--border);border-bottom:1px solid var(--border);padding:8px;
-  display:flex;flex-direction:column;gap:6px;min-width:0;
+  display:flex;flex-direction:column;gap:6px;min-width:0;min-height:0;
 }
 .cal-day:nth-child(7n){border-right:none;}
 .cal-day.other-month{background:rgba(255,255,255,.012);}
@@ -375,7 +380,7 @@ tr:hover .row-del{opacity:1;}
 .cal-day.today .cal-day-num{
   background:var(--grad-brand);color:#fff;border-radius:6px;padding:1px 7px;
 }
-.cal-day-head{display:flex;align-items:center;justify-content:space-between;}
+.cal-day-head{display:flex;align-items:center;justify-content:space-between;flex:none;}
 .cal-day-num{font-size:12.5px;font-weight:500;color:var(--text-mid);padding:1px 4px;}
 .cal-day-add{
   width:18px;height:18px;display:flex;align-items:center;justify-content:center;border-radius:5px;
@@ -383,7 +388,10 @@ tr:hover .row-del{opacity:1;}
 }
 .cal-day:hover .cal-day-add{opacity:1;}
 .cal-day-add:hover{color:var(--pink-400);background:var(--bg-2);}
-.cal-items{display:flex;flex-direction:column;gap:5px;flex:1;min-height:20px;border-radius:6px;}
+.cal-items{
+  display:flex;flex-direction:column;gap:5px;flex:1;min-height:0;border-radius:6px;
+  overflow-y:auto;padding-right:2px;margin-right:-2px;
+}
 .cal-items.dragover{background:rgba(227,28,121,.08);outline:1.5px dashed var(--pink-500);}
 .cal-items.dragover.copying{background:rgba(232,163,61,.1);outline-color:var(--amber);}
 
